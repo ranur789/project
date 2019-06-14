@@ -8,7 +8,7 @@ package cardgameweek4;
 
 public class CardHand {
 
-        private int handSize = 52;
+        private int handSize = 60;
 	public Card[] cards = new Card[handSize];
 
 	
@@ -18,11 +18,11 @@ public class CardHand {
         public void generateHand()
         {
                 int countCards = 0;
-		for(Card.Suit s: Card.Suit.values())
+		for(Card.Color c: Card.Color.values())
                 {
-                    for(Card.Value v: Card.Value.values())
+                    for(Card.Rank r: Card.Rank.values())
                     {
-                        cards[countCards] = (new Card(s,v));
+                        cards[countCards] = (new Card(c,r));
                         countCards++;
                     }
                 }//end outter for

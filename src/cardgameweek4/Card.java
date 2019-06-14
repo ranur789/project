@@ -1,27 +1,30 @@
 package cardgameweek4;
 /**
  * Starter code for the Card class.
- * To be used in Week 4.
- * @author dancye, 2019
+ * Task 5 enumeration and delagation allows code reuse
+ * Task 4  The OP principle lets use reuse the UML and update the source code
+ * to be used in WEEK 4
+ * @ author dancye , 2019
  */
 public class Card {
     
-        public enum Suit {HEARTS, CLUBS,SPADES,DIAMONDS};
-        public enum Value{ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
-        private final Suit suit;
-        private final Value value;
+        public enum Color {RED, YELLOW,GREEN,BLUE};
+        public enum Rank{ZERO,ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
+        SKIP, REVERSE,DRAW_TWO, DRAW_FOUR, WILDCARD };
+        private final Color color;
+        private final Rank rank;
         
-        public Card(Suit s, Value gVal)
+        public Card(Color c, Rank r)
         {
-           suit =s;
-           value= gVal;
+           color =c;
+           rank= r;
         }
-	public Value getValue() {
-		return this.value;
+	public  Color getColor() {
+		return this.color;
 	}
 
 	
-	public Suit getSuit() {
-		return this.suit;
+	public Rank getRank() {
+		return this.rank;
         }
 }
